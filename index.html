@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="부산·울산·경남 기반 초교파 디지털 선교 네트워크. AI 복음 콘텐츠와 디지털 전도명함으로 모든 성도가 일상에서 복음을 전하도록 돕습니다.">
+<meta property="og:title" content="디지털복음선교회">
+<meta property="og:description" content="손 안의 명함 한 장이 복음의 첫 인사가 됩니다. 창립회원을 모집합니다.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta name="theme-color" content="#0B1C22">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='3' y='6' width='24' height='18' rx='4' fill='%230B1C22'/%3E%3Cpath d='M15 10v10M11 14h8' stroke='%23E2702A' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>html{color-scheme:light}:root{padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}</style>
+<title>디지털복음선교회</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Archivo:wght@500;600;800&display=swap">
+<style>
+/* Layout: 기업형 풀블리드 — 이미지 슬라이더 히어로, 영문 아이브로우 + 굵은 국문 제목, 흑백 바탕에 새벽 오렌지 한 색 */
+:root{
+  --bg:#FFFFFF; --soft:#F2F4F5; --ink:#121518; --muted:#5B636A; --line:#E2E6E8;
+  --accent:#E2702A; --accent-soft:#FCEBDD; --teal:#0E6A70; --teal-soft:#E0EEEE; --night:#0B1C22; --on-night:#EEF3F3;
+  --kr:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --en:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1315; --soft:#161C1F; --ink:#ECF0F1; --muted:#9BA5AB; --line:#263035;
+  --accent:#F08A45; --accent-soft:#33241A; --teal:#5FC0C4; --teal-soft:#15292C; --night:#081418; --on-night:#EEF3F3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1315; --soft:#161C1F; --ink:#ECF0F1; --muted:#9BA5AB; --line:#263035;
+  --accent:#F08A45; --accent-soft:#33241A; --teal:#5FC0C4; --teal-soft:#15292C; --night:#081418; --on-night:#EEF3F3; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--kr);font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:110px;scroll-margin-top:72px}
+.eyebrow{font-family:var(--en);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.title{font-size:clamp(28px,3.8vw,44px);font-weight:900;letter-spacing:-.02em;margin-top:12px}
+.title b{color:var(--accent);font-weight:900}
+.lead{color:var(--muted);margin-top:16px;max-width:40em}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:48px}
+.more{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.more i{width:34px;height:34px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:transform .2s}
+.more i svg{width:14px;height:14px;stroke:#fff}
+.more:hover i{transform:translateX(4px)}
+
+/* header */
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;color:#fff;transition:background .25s,color .25s,box-shadow .25s}
+header.solid{background:var(--bg);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.bar{display:flex;align-items:center;gap:28px;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.logo small{display:block;font-family:var(--en);font-weight:600;font-size:9.5px;letter-spacing:.2em;opacity:.7;margin-top:-2px}
+.gnb{display:flex;gap:6px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.gnb a{display:block;padding:8px 14px;font-weight:500;font-size:15.5px;border-radius:6px;opacity:.92}
+.gnb a:hover{opacity:1;color:var(--accent)}
+.hcta{padding:10px 18px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;white-space:nowrap}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border:0;background:transparent;color:inherit;cursor:pointer}
+.burger svg{width:26px;height:26px;stroke:currentColor}
+.drawer{position:fixed;inset:0;z-index:70;background:var(--night);color:var(--on-night);padding:calc(24px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) 32px max(24px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:8px}
+.drawer .close{align-self:flex-end;width:44px;height:44px;border:0;background:transparent;color:inherit;font-size:30px;cursor:pointer}
+.drawer a{font-size:24px;font-weight:700;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.drawer a span{font-family:var(--en);font-size:12px;letter-spacing:.18em;color:var(--accent);display:block;font-weight:600}
+@media (max-width:920px){.gnb,.hcta{display:none}.burger{display:block}.bar{height:64px}}
+
+/* hero slider */
+.hero{position:relative;height:clamp(560px,88vh,820px);background:var(--night);color:#fff;overflow:hidden;padding:0}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1s ease,visibility 1s}
+.slide.on{opacity:1;visibility:visible}
+.slide>svg{position:absolute;inset:0;width:100%;height:100%}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,12,15,.78) 0%,rgba(4,12,15,.45) 45%,rgba(4,12,15,0) 75%)}
+.slide .copy{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:60px}
+.slide .en{font-family:var(--en);font-weight:600;letter-spacing:.2em;font-size:clamp(11px,1.2vw,14px);color:#F6B27E;text-transform:uppercase}
+.slide h1,.slide h2{font-size:clamp(34px,5.6vw,68px);font-weight:900;letter-spacing:-.03em;line-height:1.22;margin:18px 0 22px;max-width:13em}
+.slide p{font-size:clamp(15px,1.4vw,18px);max-width:32em;opacity:.88}
+@media (prefers-reduced-motion:no-preference){
+  .slide .copy>*{transition:transform .9s ease,opacity .9s ease}
+  .slide:not(.on) .copy>*{transform:translateY(24px);opacity:0}
+}
+.ctrl{position:absolute;z-index:5;left:0;right:0;bottom:calc(36px + env(safe-area-inset-bottom,0px))}
+.ctrl .wrap{display:flex;align-items:center;gap:18px}
+.count{font-family:var(--en);font-weight:600;font-size:14px;letter-spacing:.1em;font-variant-numeric:tabular-nums}
+.count b{font-size:20px}
+.prog{width:140px;height:2px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.prog i{position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(0)}
+.prog i.run{animation:prog 6s linear forwards}
+@keyframes prog{to{transform:scaleX(1)}}
+.cbtn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+.cbtn:hover{background:rgba(255,255,255,.12)}
+.cbtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.scroll-cue{margin-left:auto;font-family:var(--en);font-size:12px;letter-spacing:.2em;opacity:.7}
+@media (max-width:640px){.prog{width:70px}.scroll-cue{display:none}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.about-img{border-radius:6px;overflow:hidden;aspect-ratio:4/5;max-width:100%;position:relative;background:var(--night)}
+.about-img svg{width:100%;height:100%;display:block}
+.about-img .tag{position:absolute;left:24px;bottom:24px;color:#fff;font-family:var(--en);font-weight:600;letter-spacing:.18em;font-size:12px}
+.acc{margin-top:36px;border-top:2px solid var(--ink)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;display:flex;align-items:center;gap:18px;padding:22px 0;cursor:pointer}
+.acc summary::-webkit-details-marker{display:none}
+.acc .no{font-family:var(--en);font-weight:800;color:var(--accent);font-size:15px;width:28px}
+.acc .st{font-size:19px;font-weight:700}
+.acc .st small{display:block;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.acc summary i{margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:transform .25s,background .25s}
+.acc summary i svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2.2}
+.acc details[open] summary i{transform:rotate(90deg);background:var(--accent-soft);border-color:transparent}
+.acc .body{padding:0 0 24px 46px;color:var(--muted);display:grid;gap:10px;font-size:15.5px}
+.acc ol{margin:0;padding-left:20px;display:grid;gap:4px}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}.about-img{aspect-ratio:16/10}}
+
+/* ministry tiles */
+.tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.tile{position:relative;aspect-ratio:3/4.2;max-width:100%;border-radius:6px;overflow:hidden;color:#fff;padding:26px 22px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+.tile>svg.bg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;transition:transform .6s ease}
+.tile:hover>svg.bg{transform:scale(1.06)}
+.tile .en{font-family:var(--en);font-weight:600;font-size:11.5px;letter-spacing:.18em;opacity:.8}
+.tile h3{font-size:21px;font-weight:900;margin:6px 0 6px}
+.tile p{font-size:14px;opacity:.85}
+.tile .arr{position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .25s}
+.tile .arr svg{width:15px;height:15px;stroke:#121518;fill:none;stroke-width:2.2}
+.tile:hover .arr{transform:rotate(45deg)}
+@media (max-width:1000px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.tile{aspect-ratio:3/3.6}.tile h3{font-size:18px}}
+
+/* business divisions */
+.biz{background:var(--soft)}
+.div{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center;padding-block:56px;border-top:1px solid var(--line)}
+.div:first-of-type{border-top:0;padding-top:0}
+.div.rev .vis{order:2}
+.vis{border-radius:6px;overflow:hidden;aspect-ratio:4/3;max-width:100%;position:relative;display:grid;place-items:center}
+.vis>svg{width:100%;height:100%;display:block}
+.vis.teal{background:linear-gradient(150deg,#0E6A70,#0B3A40)}
+.txt{min-width:0}
+.txt .en{font-family:var(--en);font-weight:800;font-size:clamp(26px,3vw,38px);letter-spacing:-.01em;color:color-mix(in srgb,var(--ink) 16%,transparent);line-height:1}
+.txt h3{font-size:clamp(24px,2.6vw,30px);font-weight:900;margin:10px 0 14px}
+.txt p{color:var(--muted)}
+.txt ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.txt li{padding-left:18px;position:relative;font-size:15.5px}
+.txt li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--accent);border-radius:1px}
+.txt details{margin-top:22px}
+.txt summary{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:700;font-size:14.5px;list-style:none;padding:10px 18px;border:1px solid var(--ink);border-radius:999px}
+.txt summary::-webkit-details-marker{display:none}
+.txt summary::after{content:"+";font-family:var(--en);font-size:18px;line-height:1;color:var(--accent)}
+.txt details[open] summary::after{content:"–"}
+.txt .xbody{margin-top:16px;padding:20px 22px;background:var(--bg);border-radius:6px;font-size:15px;color:var(--muted);display:grid;gap:8px}
+.txt .xbody b{color:var(--ink)}
+@media (max-width:900px){.div{grid-template-columns:1fr;gap:28px}.div.rev .vis{order:0}.vis.teal{aspect-ratio:1/1}}
+
+/* phone mockup inside division 1 */
+.phone{width:clamp(150px,30%,210px);aspect-ratio:9/18.5;border-radius:34px;background:#071418;padding:10px;box-shadow:0 30px 60px -24px rgba(0,0,0,.6);transform:rotate(-4deg)}
+.screen{height:100%;border-radius:26px;background:#FFFFFF;overflow:hidden;display:flex;flex-direction:column;color:#121518}
+.card-top{background:linear-gradient(160deg,#0E6A70,#0A4C52);color:#F2F8F7;padding:20px 16px 16px;position:relative}
+.card-top small{font-family:var(--en);font-size:8.5px;letter-spacing:.16em;opacity:.8}
+.card-top b{display:block;font-size:17px;margin-top:4px}
+.card-top span{font-size:11px;opacity:.85}
+.avatar{position:absolute;right:14px;top:18px;width:36px;height:36px;border-radius:50%;background:#F2F8F7;color:#0E6A70;display:grid;place-items:center;font-weight:900}
+.ptabs{display:flex;gap:4px;padding:10px 10px 2px}
+.ptabs button{flex:1;font:inherit;font-size:10.5px;padding:6px 2px;border-radius:6px;border:1px solid #E2E6E8;background:transparent;color:#5B636A;cursor:pointer}
+.ptabs button[aria-selected="true"]{background:#121518;color:#fff;border-color:#121518}
+.pmsg{padding:10px 12px 0;font-size:11.5px;line-height:1.55;min-height:70px;transition:opacity .2s}
+.plinks{display:grid;gap:6px;padding:8px 10px 14px;margin-top:auto}
+.plinks div{display:flex;justify-content:space-between;padding:9px 11px;border-radius:8px;background:#E0EEEE;font-size:11px}
+.plinks div:first-child{background:#FCEBDD}
+.plinks span{color:#5B636A;font-size:10px}
+.ptry{position:absolute;left:18px;bottom:16px;color:#fff;font-size:12px;opacity:.85}
+
+/* cases carousel */
+.cnav{display:flex;gap:8px}
+.cnav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.cnav button:hover{background:var(--ink);color:var(--bg)}
+.cnav svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,calc((100% - 60px)/4));gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.case{scroll-snap-align:start;min-width:0}
+.case .img{aspect-ratio:4/5;border-radius:6px;overflow:hidden;max-width:100%}
+.case .img svg{width:100%;height:100%;display:block;transition:transform .5s}
+.case:hover .img svg{transform:scale(1.04)}
+.case .cat{display:inline-block;margin-top:16px;font-family:var(--en);font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--accent)}
+.case h3{font-size:18px;font-weight:700;margin-top:4px}
+.case p{font-size:14px;color:var(--muted);margin-top:4px}
+.case .ex{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px}
+@media (max-width:640px){.track{grid-auto-columns:78%}}
+.svgt{font-family:var(--kr)}
+
+/* process */
+.process{background:var(--soft)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.step{background:var(--bg);border-radius:6px;padding:30px 24px 28px;display:grid;gap:6px;align-content:start;position:relative}
+.step .n{font-family:var(--en);font-weight:800;font-size:40px;line-height:1;color:var(--accent)}
+.step .en{font-family:var(--en);font-weight:600;font-size:11px;letter-spacing:.18em;color:var(--muted);margin-top:16px}
+.step h3{font-size:19px;font-weight:900}
+.step ul{margin:10px 0 0;padding-left:16px;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.step:not(:last-child)::after{content:"";position:absolute;right:-12px;top:44px;width:12px;height:2px;background:var(--accent);z-index:1}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step::after{display:none}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* CTA band */
+.band{position:relative;color:#fff;padding-block:100px;overflow:hidden;isolation:isolate;background:var(--night)}
+.band>svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,12,15,.8),rgba(4,12,15,.35));z-index:-1}
+.band h2{font-size:clamp(28px,4vw,46px);font-weight:900;letter-spacing:-.02em}
+.band p{opacity:.85;margin-top:14px;max-width:36em}
+.goals{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:48px;border-top:1px solid rgba(255,255,255,.25)}
+.goal{padding:20px 16px 0 0}
+.goal b{display:block;font-family:var(--en);font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1;font-variant-numeric:tabular-nums}
+.goal b small{font-family:var(--kr);font-size:15px;font-weight:700;margin-left:2px}
+.goal span{font-size:13.5px;opacity:.8}
+.band .fine{font-size:12.5px;opacity:.65;margin-top:18px}
+.band .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn.or{background:var(--accent);color:#fff}
+.btn.or:hover{filter:brightness(1.07)}
+.btn.line{border-color:rgba(255,255,255,.6);color:#fff;background:transparent}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+@media (max-width:760px){.goals{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}}
+
+/* apply */
+.apply{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px}
+.apply-intro ul{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:10px;font-size:14.5px;color:var(--muted)}
+.apply-intro li{padding-left:22px;position:relative}
+.apply-intro li::before{content:"";position:absolute;left:2px;top:.55em;width:10px;height:6px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.apply-art{display:block;width:100%;max-width:340px;height:auto;margin-top:32px}
+.panel{background:var(--soft);border-radius:6px;padding:36px;min-width:0}
+form{display:grid;gap:18px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form label{display:grid;gap:6px;font-size:14px;font-weight:700}
+form legend{display:block;font-size:14px;font-weight:700;padding:0;margin-bottom:8px}
+form b.req{color:var(--accent);margin-left:3px}
+input,select,textarea{font:inherit;font-size:15px;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;width:100%;min-width:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#C2410C}
+fieldset{border:0;margin:0;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{display:block;font-weight:400}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;padding:8px 15px;border:1px solid var(--line);border-radius:999px;font-size:14px;cursor:pointer;background:var(--bg)}
+.chips input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chips input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.consent{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:13.5px!important;color:var(--muted)}
+.consent input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--accent)}
+.submit{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.submit .btn:disabled{opacity:.55;cursor:wait}
+#f-status{font-size:14px;color:var(--muted)}
+#f-status.ok{color:var(--teal);font-weight:700}
+#f-status.err{color:#C2410C}
+.ext{display:grid;gap:16px}
+.ext h3{font-size:22px;font-weight:900}
+.ext>p{color:var(--muted);font-size:15px}
+.ext ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ext li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.ext li span{color:var(--muted);font-size:13px}
+.ext .btn{justify-self:start}
+@media (max-width:900px){.apply{grid-template-columns:1fr;gap:36px}.panel{padding:24px}}
+@media (max-width:520px){form .row{grid-template-columns:1fr}}
+
+.admin{margin-top:28px;padding:28px;border-radius:6px;border:1px dashed var(--accent)}
+.admin h3{font-size:20px;font-weight:900;margin:6px 0 16px}
+.admin-sum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.admin-sum span{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft)}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:500;white-space:nowrap}
+td.empty{color:var(--muted);text-align:center;padding:28px}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* notice */
+.notice{padding-top:0}
+.nlist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.nlist details{border-bottom:1px solid var(--line)}
+.nlist summary{list-style:none;display:grid;grid-template-columns:110px minmax(0,1fr) auto 32px;gap:20px;align-items:center;padding:22px 4px;cursor:pointer}
+.nlist summary::-webkit-details-marker{display:none}
+.nlist .k{font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.12em;color:var(--accent)}
+.nlist .t{font-weight:700;font-size:16.5px}
+.nlist time{font-family:var(--en);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.nlist .plus{font-family:var(--en);font-size:24px;line-height:1;color:var(--muted);text-align:center;transition:transform .2s}
+.nlist details[open] .plus{transform:rotate(45deg);color:var(--accent)}
+.nlist .nb{padding:0 4px 22px 134px;color:var(--muted);font-size:15px}
+@media (max-width:700px){.nlist summary{grid-template-columns:minmax(0,1fr) 28px;gap:6px 12px}.nlist .k{grid-column:1}.nlist .t{grid-column:1}.nlist time{grid-column:1;font-size:13px}.nlist .plus{grid-row:1/4;grid-column:2}.nlist .nb{padding-left:4px}}
+
+/* footer */
+footer{background:var(--night);color:var(--on-night);padding-block:64px 48px}
+.ft{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:48px}
+.ft .logo{color:#fff}
+.finfo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;font-size:14px}
+.finfo dt{font-family:var(--en);font-weight:600;font-size:11px;letter-spacing:.16em;color:#F6B27E;text-transform:uppercase}
+.finfo dd{margin:4px 0 0;opacity:.8}
+.fcopy{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;opacity:.6}
+@media (max-width:760px){.ft{grid-template-columns:1fr}.finfo{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="s-person" viewBox="0 0 40 60"><circle cx="20" cy="12" r="10" fill="currentColor"/><path d="M4 60C4 38 12 27 20 27S36 38 36 60Z" fill="currentColor"/></symbol>
+    <symbol id="s-church" viewBox="0 0 60 70"><rect x="28.5" y="0" width="3" height="11" fill="currentColor"/><rect x="25" y="3" width="10" height="3" fill="currentColor"/><path d="M24 26V13L30 9L36 13V26Z" fill="currentColor"/><path d="M8 36L30 20L52 36V70H8Z" fill="currentColor"/><circle cx="30" cy="42" r="4" style="fill:var(--door,#0B1C22)"/><rect x="25" y="52" width="10" height="18" rx="5" style="fill:var(--door,#0B1C22)"/></symbol>
+    <symbol id="s-phone" viewBox="0 0 40 70"><rect width="40" height="70" rx="8" fill="currentColor"/><rect x="4" y="8" width="32" height="52" rx="3" style="fill:var(--scr,#0B1C22)"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-diag" viewBox="0 0 16 16"><path d="M4 12L12 4M5.5 4H12v6.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <linearGradient id="g-dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1D26"/><stop offset=".5" stop-color="#1D4A55"/><stop offset=".78" stop-color="#C9693A"/><stop offset="1" stop-color="#F3B26B"/></linearGradient>
+    <radialGradient id="g-glow"><stop offset="0" stop-color="#FFD39A" stop-opacity=".9"/><stop offset="1" stop-color="#FFD39A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E6A70"/><stop offset="1" stop-color="#082E33"/></linearGradient>
+    <linearGradient id="g-dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14232B"/><stop offset=".55" stop-color="#5A3424"/><stop offset="1" stop-color="#E2702A"/></linearGradient>
+  </defs>
+</svg>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="디지털복음선교회 처음으로">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="6" width="24" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 10v10M11 14h8" stroke="#E2702A" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>디지털복음선교회<small>DIGITAL GOSPEL MISSION</small></span>
+    </a>
+    <ul class="gnb">
+      <li><a href="#about">선교회 소개</a></li>
+      <li><a href="#ministry">사역 분야</a></li>
+      <li><a href="#cases">사례·콘텐츠</a></li>
+      <li><a href="#process">도입 절차</a></li>
+      <li><a href="#notice">소식</a></li>
+    </ul>
+    <a class="hcta" href="#apply">창립회원 신청</a>
+    <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 26 26" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h18M4 13h18M4 19h18"/></svg></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" hidden aria-label="모바일 메뉴">
+  <button class="close" id="dclose" aria-label="메뉴 닫기">×</button>
+  <a href="#about"><span>ABOUT</span>선교회 소개</a>
+  <a href="#ministry"><span>MINISTRY</span>사역 분야</a>
+  <a href="#cases"><span>CASES</span>사례·콘텐츠</a>
+  <a href="#process"><span>PROCESS</span>도입 절차</a>
+  <a href="#apply"><span>JOIN</span>창립회원 신청</a>
+  <a href="#notice"><span>NOTICE</span>소식</a>
+</nav>
+
+<main id="top">
+  <!-- HERO SLIDER -->
+  <section class="hero" aria-roledescription="carousel" aria-label="디지털복음선교회 소개 슬라이드">
+    <div class="slide on" aria-roledescription="slide" aria-label="1 / 3">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1600" height="900" fill="url(#g-dawn)"/>
+        <circle cx="1180" cy="660" r="330" fill="url(#g-glow)"/>
+        <circle cx="1180" cy="680" r="120" fill="#FFD08A"/>
+        <g stroke="#FFFFFF" stroke-opacity=".35" stroke-dasharray="4 8" fill="none" stroke-width="1.5"><path d="M760 240L900 170L1040 260L1200 180L1360 270"/></g>
+        <g fill="#FFFFFF"><circle cx="760" cy="240" r="5" opacity=".7"/><circle cx="900" cy="170" r="6"/><circle cx="1040" cy="260" r="5" opacity=".7"/><circle cx="1200" cy="180" r="6"/><circle cx="1360" cy="270" r="5" opacity=".7"/></g>
+        <use href="#s-phone" x="886" y="118" width="28" height="44" style="color:#F6B27E;--scr:#16323A"/>
+        <use href="#s-phone" x="1186" y="128" width="28" height="44" style="color:#FFFFFF;--scr:#16323A"/>
+        <path d="M0 640C180 580 330 600 470 620S760 560 930 590 1240 640 1600 600V900H0Z" fill="#163A44"/>
+        <path d="M0 730C140 680 280 650 420 660S620 700 760 730V900H0Z" fill="#0D2830"/>
+        <use href="#s-church" x="330" y="520" width="120" height="140" style="color:#0D2830;--door:#F3B26B"/>
+        <rect y="742" width="1600" height="158" fill="#0E3640"/>
+        <path d="M0 742C300 732 600 750 900 740S1400 734 1600 744" fill="none" stroke="#163A44" stroke-width="6"/>
+        <g stroke="#FFD08A" stroke-linecap="round" stroke-width="5"><path d="M1090 780h180" opacity=".8"/><path d="M1120 810h120" opacity=".6"/><path d="M1150 840h60" opacity=".45"/></g>
+        <g stroke="#FFFFFF" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"><path d="M120 800h70M420 830h110M760 790h80"/></g>
+      </svg>
+      <div class="wrap copy">
+        <span class="en">ONE CARD · ONE GREETING · ONE GOSPEL</span>
+        <h1>손 안의 명함 한 장이<br>복음의 첫 인사가 됩니다</h1>
+        <p>디지털복음선교회는 AI 복음 콘텐츠와 디지털 전도명함으로 모든 성도가 일상에서 복음을 전하도록 돕는 초교파 선교 네트워크입니다.</p>
+      </div>
+    </div>
+    <div class="slide" aria-roledescription="slide" aria-label="2 / 3">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1600" height="900" fill="url(#g-teal)"/>
+        <g stroke="#FFFFFF" stroke-opacity=".28" stroke-dasharray="5 9" fill="none" stroke-width="2">
+          <path d="M1150 450L880 230M1150 450L860 640M1150 450L1450 210M1150 450L1480 690M1150 450L1010 820"/>
+        </g>
+        <g style="color:#FFFFFF" opacity=".9">
+          <use href="#s-person" x="852" y="186" width="56" height="84"/><use href="#s-person" x="832" y="600" width="56" height="84" style="color:#F6B27E"/>
+          <use href="#s-person" x="1424" y="166" width="56" height="84" style="color:#F6B27E"/><use href="#s-person" x="1452" y="650" width="56" height="84"/>
+          <use href="#s-person" x="982" y="776" width="56" height="84"/>
+        </g>
+        <g transform="rotate(-6 1150 450)">
+          <rect x="1010" y="160" width="290" height="590" rx="44" fill="#06181C"/>
+          <rect x="1024" y="176" width="262" height="558" rx="32" fill="#FFFFFF"/>
+          <rect x="1024" y="176" width="262" height="170" rx="32" fill="#0E6A70"/><rect x="1024" y="300" width="262" height="46" fill="#0E6A70"/>
+          <rect x="1048" y="214" width="120" height="10" rx="5" fill="#FFFFFF" opacity=".6"/>
+          <rect x="1048" y="240" width="160" height="22" rx="6" fill="#FFFFFF"/>
+          <rect x="1048" y="274" width="110" height="10" rx="5" fill="#FFFFFF" opacity=".7"/>
+          <circle cx="1240" cy="232" r="24" fill="#FFFFFF"/>
+          <rect x="1046" y="370" width="68" height="28" rx="8" fill="#121518"/><rect x="1122" y="370" width="68" height="28" rx="8" fill="none" stroke="#E2E6E8" stroke-width="2"/><rect x="1198" y="370" width="68" height="28" rx="8" fill="none" stroke="#E2E6E8" stroke-width="2"/>
+          <rect x="1048" y="420" width="214" height="10" rx="5" fill="#D9DEE1"/><rect x="1048" y="440" width="190" height="10" rx="5" fill="#D9DEE1"/><rect x="1048" y="460" width="150" height="10" rx="5" fill="#D9DEE1"/>
+          <rect x="1046" y="560" width="218" height="44" rx="10" fill="#FCEBDD"/><rect x="1046" y="614" width="218" height="44" rx="10" fill="#E0EEEE"/><rect x="1046" y="668" width="218" height="44" rx="10" fill="#E0EEEE"/>
+          <circle cx="1240" cy="582" r="11" fill="#E2702A"/>
+        </g>
+        <g fill="#F6B27E"><rect x="940" y="380" width="70" height="44" rx="6" transform="rotate(-12 975 402)"/><rect x="1330" y="440" width="70" height="44" rx="6" transform="rotate(10 1365 462)" fill="#FFFFFF"/></g>
+      </svg>
+      <div class="wrap copy">
+        <span class="en">EVERY BELIEVER, AN EVERYDAY MESSENGER</span>
+        <h2>모든 성도가<br>일상의 전도자가 됩니다</h2>
+        <p>직장, 이웃, 새가족 초청 등 만남의 상황에 맞는 명함을 골라 예배 영상과 교회 소개, 오늘의 말씀을 함께 전합니다.</p>
+      </div>
+    </div>
+    <div class="slide" aria-roledescription="slide" aria-label="3 / 3">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1600" height="900" fill="url(#g-dusk)"/>
+        <circle cx="1120" cy="900" r="520" fill="#F3B26B" opacity=".25"/>
+        <circle cx="1120" cy="900" r="340" fill="#F6B27E" opacity=".45"/>
+        <circle cx="1120" cy="900" r="190" fill="#FFD08A"/>
+        <g stroke="#FFD08A" stroke-opacity=".35" stroke-width="3"><path d="M1120 900L1120 300M1120 900L820 380M1120 900L1420 380M1120 900L620 560M1120 900L1600 560"/></g>
+        <use href="#s-church" x="1060" y="600" width="120" height="140" style="color:#14232B;--door:#FFD08A"/>
+        <g style="color:#14232B">
+          <use href="#s-person" x="640" y="700" width="70" height="105"/><use href="#s-person" x="730" y="684" width="76" height="114"/><use href="#s-person" x="830" y="706" width="66" height="99"/><use href="#s-person" x="920" y="690" width="74" height="111"/>
+          <use href="#s-person" x="1220" y="694" width="74" height="111"/><use href="#s-person" x="1316" y="706" width="66" height="99"/><use href="#s-person" x="1404" y="684" width="76" height="114"/><use href="#s-person" x="1500" y="700" width="70" height="105"/>
+        </g>
+        <rect y="800" width="1600" height="100" fill="#14232B"/>
+      </svg>
+      <div class="wrap copy">
+        <span class="en">CONNECTING CHURCHES · BUSAN · ULSAN · GYEONGNAM</span>
+        <h2>부산·울산·경남의 교회를<br>하나로 잇습니다</h2>
+        <p>교단을 넘어 지역 교회와 선교기관이 함께 콘텐츠를 만들고 나누며, 작은 교회도 디지털 선교에 참여하도록 돕습니다.</p>
+      </div>
+    </div>
+
+    <div class="ctrl">
+      <div class="wrap">
+        <span class="count" aria-live="polite"><b id="cur">01</b> / 03</span>
+        <span class="prog" aria-hidden="true"><i id="prog"></i></span>
+        <button class="cbtn" id="prev" aria-label="이전 슬라이드"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+        <button class="cbtn" id="play" aria-label="자동 넘김 멈춤"><svg viewBox="0 0 16 16" id="playIcon"><path d="M6 3v10M10 3v10"/></svg></button>
+        <button class="cbtn" id="next" aria-label="다음 슬라이드"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+        <span class="scroll-cue">SCROLL DOWN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-img">
+        <svg viewBox="0 0 500 625" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="500" height="625" fill="url(#g-dawn)"/>
+          <circle cx="330" cy="470" r="200" fill="url(#g-glow)"/>
+          <circle cx="330" cy="480" r="70" fill="#FFD08A"/>
+          <path d="M0 440C80 400 160 410 240 430S400 400 500 420V625H0Z" fill="#163A44"/>
+          <path d="M0 520C70 490 140 476 210 484S330 510 380 530V625H0Z" fill="#0D2830"/>
+          <use href="#s-church" x="94" y="388" width="80" height="94" style="color:#0D2830;--door:#F3B26B"/>
+          <rect y="535" width="500" height="90" fill="#0E3640"/>
+          <g stroke="#FFD08A" stroke-linecap="round" stroke-width="4"><path d="M280 565h100" opacity=".8"/><path d="M300 590h60" opacity=".55"/></g>
+          <g fill="#FFFFFF"><circle cx="150" cy="160" r="4" opacity=".7"/><circle cx="240" cy="110" r="5"/><circle cx="340" cy="170" r="4" opacity=".7"/><circle cx="420" cy="120" r="5"/></g>
+          <path d="M150 160L240 110L340 170L420 120" stroke="#FFFFFF" stroke-opacity=".35" stroke-dasharray="3 6" fill="none"/>
+        </svg>
+        <span class="tag">SINCE 2026 · BUSAN ULSAN GYEONGNAM</span>
+      </div>
+      <div>
+        <span class="eyebrow">About</span>
+        <h2 class="title">복음의 본질은 지키고,<br>전하는 방법은 <b>시대에 맞게</b></h2>
+        <p class="lead">디지털복음선교회는 성경적 가치와 선교 정신을 바탕으로 AI와 디지털 기술을 활용해 복음 콘텐츠를 제작·보급하고, 국내외 전도와 선교를 지원하며, 교회와 선교기관을 잇는 협력 네트워크를 세웁니다.</p>
+        <div class="acc">
+          <details open>
+            <summary><span class="no">01</span><span class="st"><small>Background</small>설립 배경</span><i><svg viewBox="0 0 16 16"><use href="#i-arrow"/></svg></i></summary>
+            <div class="body">
+              <p>스마트폰과 인터넷, 인공지능은 사람들이 소통하고 정보를 받는 방식을 빠르게 바꾸고 있습니다. 대면 전도와 선교를 이어가면서 디지털 기술을 함께 쓰면, 시간과 공간을 넘어 더 많은 사람에게 복음을 소개할 수 있습니다.</p>
+              <p>성도 한 사람 한 사람이 디지털 전도명함을 지니면 일상의 만남이 곧 복음의 접점이 됩니다.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span class="no">02</span><span class="st"><small>Mission</small>여섯 가지 핵심 사명</span><i><svg viewBox="0 0 16 16"><use href="#i-arrow"/></svg></i></summary>
+            <div class="body">
+              <ol>
+                <li>AI와 디지털 기술로 복음 전파의 새로운 방법을 개발합니다.</li>
+                <li>디지털 전도명함으로 모든 성도가 일상에서 전도자가 되도록 돕습니다.</li>
+                <li>목회자·선교사·전도자가 쓸 수 있는 전도 콘텐츠를 만들고 보급합니다.</li>
+                <li>부산·울산·경남 지역 교회 및 선교기관과 협력합니다.</li>
+                <li>디지털 활용이 어려운 미자립교회와 선교 현장을 지원합니다.</li>
+                <li>국내외 선교 네트워크를 세우고 지속 가능한 구조를 만듭니다.</li>
+              </ol>
+            </div>
+          </details>
+          <details>
+            <summary><span class="no">03</span><span class="st"><small>Declaration</small>설립 선언</span><i><svg viewBox="0 0 16 16"><use href="#i-arrow"/></svg></i></summary>
+            <div class="body">
+              <p>우리는 디지털 기술을 복음 전파의 도구로 쓰며, 사람과 사람을 잇고, 교회와 선교기관이 협력하며, 복음이 필요한 곳에 말씀이 전해지도록 힘쓰겠습니다.</p>
+              <p>뜻을 함께하는 목회자, 선교사, 전도자, 평신도 일동</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINISTRY TILES -->
+  <section id="ministry" style="padding-top:0">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">Ministry</span>
+          <h2 class="title">다섯 갈래의 <b>디지털 선교</b></h2>
+        </div>
+        <a class="more" href="#biz">사역 자세히 보기<i><svg viewBox="0 0 16 16" fill="none" stroke-width="2"><use href="#i-arrow"/></svg></i></a>
+      </div>
+      <div class="tiles">
+        <a class="tile" href="#biz-card">
+          <svg class="bg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="420" fill="#0E6A70"/><g transform="rotate(-10 200 150)"><rect x="140" y="40" width="120" height="220" rx="20" fill="#0A4C52"/><rect x="150" y="54" width="100" height="192" rx="12" fill="#FFFFFF" opacity=".92"/><rect x="150" y="54" width="100" height="60" rx="12" fill="#E2702A"/><rect x="162" y="134" width="76" height="8" rx="4" fill="#0E6A70" opacity=".4"/><rect x="162" y="150" width="60" height="8" rx="4" fill="#0E6A70" opacity=".4"/></g><rect y="260" width="300" height="160" fill="#0B2F33" opacity=".55"/></svg>
+          <span class="arr"><svg viewBox="0 0 16 16"><use href="#i-diag"/></svg></span>
+          <span class="en">DIGITAL CARD</span><h3>디지털 전도명함</h3><p>만남을 전도로 잇는 명함</p>
+        </a>
+        <a class="tile" href="#biz-ai">
+          <svg class="bg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="420" fill="#C85E22"/><circle cx="200" cy="140" r="110" fill="#E2702A"/><rect x="110" y="70" width="110" height="140" rx="10" fill="#FFF3E8" transform="rotate(8 165 140)"/><rect x="80" y="90" width="110" height="140" rx="10" fill="#FFFFFF" transform="rotate(-6 135 160)"/><circle cx="135" cy="150" r="22" fill="#FFD08A" transform="rotate(-6 135 160)"/><path d="M230 60l8 18 18 8-18 8-8 18-8-18-18-8 18-8z" fill="#FFFFFF"/><rect y="260" width="300" height="160" fill="#6E2F0E" opacity=".45"/></svg>
+          <span class="arr"><svg viewBox="0 0 16 16"><use href="#i-diag"/></svg></span>
+          <span class="en">AI CONTENT</span><h3>AI 복음 콘텐츠</h3><p>말씀 이미지와 초청 카드</p>
+        </a>
+        <a class="tile" href="#biz-edu">
+          <svg class="bg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="420" fill="#2B3A42"/><rect x="70" y="50" width="180" height="110" rx="8" fill="#3E5560"/><path d="M145 85l30 20-30 20z" fill="#F6B27E"/><g style="color:#5F7A85"><use href="#s-person" x="60" y="190" width="40" height="60"/><use href="#s-person" x="120" y="190" width="40" height="60"/><use href="#s-person" x="180" y="190" width="40" height="60"/><use href="#s-person" x="240" y="190" width="40" height="60"/></g><rect y="260" width="300" height="160" fill="#141D22" opacity=".55"/></svg>
+          <span class="arr"><svg viewBox="0 0 16 16"><use href="#i-diag"/></svg></span>
+          <span class="en">EDUCATION</span><h3>디지털 선교교육</h3><p>누구나 쓰는 AI 도구</p>
+        </a>
+        <a class="tile" href="#biz-net">
+          <svg class="bg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="420" fill="#12454B"/><g stroke="#F6B27E" stroke-width="2" stroke-dasharray="4 6" fill="none"><path d="M150 150L70 90M150 150L240 80M150 150L80 220M150 150L235 215"/></g><g style="color:#5FC0C4;--door:#12454B"><use href="#s-church" x="46" y="58" width="44" height="52"/><use href="#s-church" x="216" y="48" width="44" height="52"/><use href="#s-church" x="56" y="190" width="44" height="52"/><use href="#s-church" x="212" y="186" width="44" height="52"/></g><circle cx="150" cy="150" r="16" fill="#E2702A"/><circle cx="150" cy="150" r="30" fill="#E2702A" opacity=".25"/><rect y="260" width="300" height="160" fill="#08282C" opacity=".55"/></svg>
+          <span class="arr"><svg viewBox="0 0 16 16"><use href="#i-diag"/></svg></span>
+          <span class="en">NETWORK</span><h3>교회 협력</h3><p>부·울·경 교회를 하나로</p>
+        </a>
+        <a class="tile" href="#biz-net">
+          <svg class="bg" viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="420" fill="#1E2F5A"/><circle cx="160" cy="140" r="90" fill="none" stroke="#7E9BD1" stroke-width="3"/><ellipse cx="160" cy="140" rx="40" ry="90" fill="none" stroke="#7E9BD1" stroke-width="3"/><path d="M70 140h180M82 95h156M82 185h156" stroke="#7E9BD1" stroke-width="3"/><rect x="190" y="60" width="86" height="34" rx="17" fill="#F6B27E"/><rect x="30" y="200" width="86" height="34" rx="17" fill="#FFFFFF"/><rect y="260" width="300" height="160" fill="#0E1730" opacity=".55"/></svg>
+          <span class="arr"><svg viewBox="0 0 16 16"><use href="#i-diag"/></svg></span>
+          <span class="en">GLOBAL MISSION</span><h3>다국어·해외선교</h3><p>언어를 넘어 복음을</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS DIVISIONS -->
+  <section class="biz" id="biz">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">Business</span>
+          <h2 class="title">선교회가 하는 일</h2>
+          <p class="lead">전도명함과 AI 콘텐츠를 중심으로, 교육과 교회 협력이 함께 움직입니다.</p>
+        </div>
+      </div>
+
+      <div class="div" id="biz-card">
+        <div class="vis teal">
+          <div class="phone" role="group" aria-label="디지털 전도명함 예시">
+            <div class="screen">
+              <div class="card-top"><small>DIGITAL GOSPEL CARD</small><b>김은혜 집사</b><span>우리교회 · 새가족부</span><div class="avatar" aria-hidden="true">은</div></div>
+              <div class="ptabs" role="tablist" aria-label="상황별 명함">
+                <button id="t-work" role="tab" aria-selected="true" data-k="work">직장</button>
+                <button id="t-near" role="tab" aria-selected="false" data-k="near">이웃</button>
+                <button id="t-new" role="tab" aria-selected="false" data-k="new">새가족 초청</button>
+              </div>
+              <p class="pmsg" id="pmsg" role="tabpanel" aria-live="polite">함께 일하게 되어 반갑습니다. 제가 다니는 교회의 주일예배를 소개해 드려요. 바쁜 한 주, 잠깐의 쉼이 되면 좋겠습니다.</p>
+              <div class="plinks"><div>주일예배 영상 보기 <span>유튜브</span></div><div>교회 위치 · 예배 시간 <span>지도</span></div><div>오늘의 말씀 <span>요 3:16</span></div></div>
+            </div>
+          </div>
+          <span class="ptry">예시 화면 · 상황별 명함을 눌러 보세요</span>
+        </div>
+        <div class="txt">
+          <span class="en">Digital Gospel Card</span>
+          <h3>디지털 전도명함 보급</h3>
+          <p>성도의 스마트폰 명함에 교회 소개, 예배 영상, 말씀 콘텐츠를 담습니다. 개인명함과 교회 전도명함을 함께 쓰고, 만나는 상황에 맞는 명함을 골라 전합니다.</p>
+          <ul>
+            <li>협력교회 시범 도입과 교회 소개 콘텐츠 구성</li>
+            <li>성도 명함 개설 지원과 사용법 교육</li>
+            <li>절기·행사별 AI 콘텐츠 정기 공급</li>
+          </ul>
+          <details>
+            <summary>미자립교회 지원 열기</summary>
+            <div class="xbody">
+              <p><b>성도 50인 이하 미자립교회</b>에는 전도명함 플랫폼을 무상으로 지원합니다.</p>
+              <p>선교회 운영은 플랫폼 수익의 20%와 후원으로 감당하며, 이 수익은 중·대형교회 도입에서 발생하는 것을 전제로 합니다.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="div rev" id="biz-ai">
+        <div class="vis" style="background:#FCEBDD">
+          <svg viewBox="0 0 480 360" aria-hidden="true">
+            <rect width="480" height="360" fill="#FCEBDD"/>
+            <g transform="rotate(-8 150 190)"><rect x="60" y="80" width="170" height="220" rx="12" fill="#0E6A70"/><path d="M90 230q27-10 55 0v40q-28-10-55 0zM145 230q28-10 55 0v40q-27-10-55 0z" fill="#FFFFFF" opacity=".9"/><rect x="84" y="112" width="122" height="12" rx="6" fill="#FFFFFF"/><rect x="84" y="134" width="90" height="10" rx="5" fill="#FFFFFF" opacity=".6"/><text x="84" y="200" class="svgt" font-size="14" font-weight="700" fill="#FFFFFF">말씀 카드</text></g>
+            <g transform="rotate(5 300 170)"><rect x="210" y="50" width="170" height="220" rx="12" fill="#FFFFFF"/><circle cx="295" cy="170" r="44" fill="#FFD08A"/><path d="M210 210c40-20 90-14 170 4v44a12 12 0 0 1-12 12H222a12 12 0 0 1-12-12z" fill="#E2702A"/><use href="#s-church" x="276" y="130" width="38" height="44" style="color:#0E6A70;--door:#FFD08A"/><text x="232" y="88" class="svgt" font-size="15" font-weight="900" fill="#121518">이번 주일,</text><text x="232" y="108" class="svgt" font-size="15" font-weight="900" fill="#121518">함께 예배해요</text></g>
+            <g transform="rotate(-3 380 280)"><rect x="300" y="230" width="150" height="96" rx="10" fill="#121518"/><circle cx="375" cy="278" r="20" fill="#E2702A"/><path d="M369 268l16 10-16 10z" fill="#FFFFFF"/></g>
+            <path d="M412 70l7 16 16 7-16 7-7 16-7-16-16-7 16-7z" fill="#E2702A"/>
+          </svg>
+        </div>
+        <div class="txt">
+          <span class="en">AI Gospel Content</span>
+          <h3>AI 복음 콘텐츠 제작</h3>
+          <p>말씀 이미지, 전도 포스터와 카드뉴스, 상황별 전도 문구, 복음 소개 영상을 AI로 빠르게 만들어 전도명함과 SNS에 담습니다.</p>
+          <ul>
+            <li>성경 말씀 이미지·초청 카드·카드뉴스</li>
+            <li>복음 소개 영상과 온라인 선교자료</li>
+            <li>다국어 전도 콘텐츠로 해외선교 지원</li>
+          </ul>
+          <details>
+            <summary>콘텐츠 원칙 열기</summary>
+            <div class="xbody">
+              <p>AI로 만든 콘텐츠는 <b>성경적 정확성과 사실관계</b>를 사람이 확인한 뒤 배포합니다.</p>
+              <p>타인의 저작권과 초상권을 존중하고, 오해를 일으킬 수 있는 콘텐츠는 만들지 않습니다. 첫해 목표는 콘텐츠 300건입니다.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="div" id="biz-edu">
+        <div class="vis" style="background:#2B3A42">
+          <svg viewBox="0 0 480 360" aria-hidden="true">
+            <rect width="480" height="360" fill="#2B3A42"/>
+            <rect x="110" y="40" width="260" height="150" rx="10" fill="#3E5560"/>
+            <rect x="126" y="56" width="228" height="118" rx="6" fill="#F4F6F7"/>
+            <rect x="142" y="72" width="90" height="86" rx="6" fill="#FCEBDD"/><circle cx="187" cy="108" r="20" fill="#FFD08A"/>
+            <rect x="244" y="76" width="96" height="10" rx="5" fill="#2B3A42" opacity=".5"/><rect x="244" y="96" width="76" height="10" rx="5" fill="#2B3A42" opacity=".3"/><rect x="244" y="130" width="70" height="22" rx="11" fill="#E2702A"/>
+            <use href="#s-person" x="388" y="120" width="52" height="78" style="color:#F6B27E"/>
+            <g style="color:#8CA3AD"><use href="#s-person" x="60" y="236" width="44" height="66"/><use href="#s-person" x="130" y="236" width="44" height="66"/><use href="#s-person" x="200" y="236" width="44" height="66"/><use href="#s-person" x="270" y="236" width="44" height="66"/><use href="#s-person" x="340" y="236" width="44" height="66"/></g>
+            <rect y="300" width="480" height="60" fill="#1F2B31"/>
+          </svg>
+        </div>
+        <div class="txt">
+          <span class="en">Digital Mission School</span>
+          <h3>디지털 선교교육</h3>
+          <p>디지털에 익숙하지 않은 목회자와 전도자도 바로 쓸 수 있도록, 실습 중심으로 AI 도구와 전도명함 활용법을 가르칩니다.</p>
+          <ul>
+            <li>AI 도구 기본 활용과 이미지·영상 제작 실습</li>
+            <li>전도명함 사용법과 SNS 배포 교육</li>
+            <li>저작권과 개인정보 보호 교육</li>
+          </ul>
+          <details>
+            <summary>첫해 운영 계획 열기</summary>
+            <div class="xbody"><p>창립 첫해 <b>교육·실습 프로그램 4회</b>, 누적 참여자 40명을 목표로 운영합니다.</p></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="div rev" id="biz-net">
+        <div class="vis" style="background:var(--bg)">
+          <svg viewBox="0 0 400 290" role="img" aria-label="부산, 울산, 경남을 하나로 잇는 사역 지역 개념도" style="padding:24px">
+            <path d="M0 290V262C80 274 150 280 220 266S330 226 400 196V290Z" fill="#0E6A70" opacity=".12"/>
+            <path d="M30 70L120 40L210 55L245 95L240 150L262 205L225 245L150 262L80 250L40 200L25 130Z" fill="#E0EEEE" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M262 52L330 40L362 80L350 125L300 130L262 105L250 80Z" fill="#B9D6D7" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M300 135L350 130L364 170L330 210L280 222L262 205L240 150Z" fill="#B9D6D7" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M248 132L135 150M248 132L305 84M248 132L308 176" fill="none" stroke="#E2702A" stroke-width="2" stroke-dasharray="4 5"/>
+            <circle cx="248" cy="132" r="18" fill="#E2702A" opacity=".2"/><circle cx="248" cy="132" r="8" fill="#E2702A"/>
+            <circle cx="135" cy="150" r="5" fill="#0E6A70"/><circle cx="305" cy="84" r="5" fill="#0E6A70"/><circle cx="308" cy="176" r="5" fill="#0E6A70"/>
+            <text x="116" y="182" class="svgt" font-size="20" font-weight="900" fill="#121518">경남</text>
+            <text x="288" y="112" class="svgt" font-size="20" font-weight="900" fill="#121518">울산</text>
+            <text x="292" y="204" class="svgt" font-size="20" font-weight="900" fill="#121518">부산</text>
+          </svg>
+        </div>
+        <div class="txt">
+          <span class="en">Church Network</span>
+          <h3>교회 협력 네트워크</h3>
+          <p>부산·울산·경남의 교회와 선교기관이 교단을 넘어 정보를 나누고 공동 디지털 선교 프로젝트를 추진합니다. 이후 전국과 해외로 넓혀 갑니다.</p>
+          <ul>
+            <li>협력교회 발굴과 정기 간담회</li>
+            <li>교회별 전도 콘텐츠 제작 지원</li>
+            <li>다국어 콘텐츠로 해외 선교지 연결</li>
+          </ul>
+          <details>
+            <summary>지역 지도 안내 열기</summary>
+            <div class="xbody"><p>왼쪽 지도는 사역 지역을 이해하기 쉽게 그린 개념도이며 <b>실제 행정 경계와 다릅니다</b>. 첫해 목표는 협력교회 10곳입니다.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES CAROUSEL -->
+  <section id="cases">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">Cases &amp; Contents</span>
+          <h2 class="title">사례와 콘텐츠</h2>
+        </div>
+        <div class="cnav"><button id="cprev" aria-label="이전 사례"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button><button id="cnext" aria-label="다음 사례"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button></div>
+      </div>
+      <div class="track" id="track" tabindex="0" aria-label="사례와 콘텐츠 목록">
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" role="img" aria-label="병영교회 주일 2부예배 유튜브 조회수: 도입 전 200~250회, 도입 당일 536회, 이후 315~480회">
+            <rect width="400" height="500" fill="#0B1C22"/>
+            <text x="32" y="56" font-family="Archivo,Arial" font-weight="600" font-size="13" letter-spacing="2.4" fill="#F6B27E">YOUTUBE VIEWS</text>
+            <text x="32" y="86" class="svgt" font-size="19" font-weight="700" fill="#FFFFFF">주일 2부예배 조회수</text>
+            <g stroke="#FFFFFF" stroke-opacity=".12"><line x1="32" x2="368" y1="420" y2="420"/><line x1="32" x2="368" y1="320" y2="320"/><line x1="32" x2="368" y1="220" y2="220"/><line x1="32" x2="368" y1="120" y2="120"/></g>
+            <g font-family="Archivo,Arial" font-size="11" fill="#FFFFFF" fill-opacity=".5"><text x="368" y="316" text-anchor="end">200</text><text x="368" y="216" text-anchor="end">400</text><text x="368" y="116" text-anchor="end">600</text></g>
+            <rect x="52" y="320" width="70" height="100" fill="#5FC0C4"/><rect x="52" y="295" width="70" height="25" fill="#5FC0C4" fill-opacity=".4"/>
+            <rect x="166" y="152" width="70" height="268" fill="#E2702A"/>
+            <rect x="280" y="262.5" width="70" height="157.5" fill="#5FC0C4"/><rect x="280" y="180" width="70" height="82.5" fill="#5FC0C4" fill-opacity=".4"/>
+            <g class="svgt" font-weight="700" fill="#FFFFFF" text-anchor="middle"><text x="87" y="284" font-size="15">200~250</text><text x="201" y="140" font-size="20">536</text><text x="315" y="168" font-size="15">315~480</text></g>
+            <g class="svgt" font-size="12" fill="#FFFFFF" fill-opacity=".7" text-anchor="middle"><text x="87" y="446">도입 전</text><text x="201" y="446">도입 당일</text><text x="315" y="446">도입 이후</text></g>
+          </svg></div>
+          <span class="cat">CASE · ULSAN</span>
+          <h3>울산 병영교회 도입 사례</h3>
+          <p>2026년 8월 23일 장로 1인 도입 후 예배 조회수 상승. 1인·단기 사례로 추가 확인 예정.</p>
+        </article>
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" aria-hidden="true"><rect width="400" height="500" fill="#FCEBDD"/><circle cx="270" cy="380" r="140" fill="#FFD08A"/><path d="M0 400C100 360 220 370 400 390V500H0Z" fill="#0E6A70"/><use href="#s-church" x="70" y="300" width="80" height="94" style="color:#0B3A40;--door:#FFD08A"/><text x="36" y="90" class="svgt" font-size="30" font-weight="900" fill="#121518">이번 주일,</text><text x="36" y="132" class="svgt" font-size="30" font-weight="900" fill="#121518">함께 예배해요</text><text x="36" y="168" class="svgt" font-size="15" fill="#5B636A">주일 오전 11시 · 본당</text></svg></div>
+          <span class="cat">AI CONTENT</span>
+          <h3>주일 초청 카드<span class="ex">예시</span></h3>
+          <p>새가족 초청 명함에 함께 보내는 이미지</p>
+        </article>
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" aria-hidden="true"><rect width="400" height="500" fill="#0E6A70"/><circle cx="200" cy="210" r="120" fill="#FFFFFF" opacity=".08"/><path d="M110 240q45-18 90 0v80q-45-18-90 0zM200 240q45-18 90 0v80q-45-18-90 0z" fill="#FFFFFF"/><path d="M200 120v60M176 144h48" stroke="#F6B27E" stroke-width="8" stroke-linecap="round"/><text x="200" y="400" text-anchor="middle" class="svgt" font-size="22" font-weight="700" fill="#FFFFFF">오늘의 말씀</text><text x="200" y="432" text-anchor="middle" font-family="Archivo,Arial" font-size="15" letter-spacing="2" fill="#F6B27E">JOHN 3:16</text></svg></div>
+          <span class="cat">AI CONTENT</span>
+          <h3>절기 말씀 카드<span class="ex">예시</span></h3>
+          <p>전도명함 '오늘의 말씀'에 담는 카드</p>
+        </article>
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" aria-hidden="true"><rect width="400" height="500" fill="#F2F4F5"/><g><rect x="30" y="40" width="160" height="200" rx="10" fill="#E2702A"/><rect x="210" y="40" width="160" height="200" rx="10" fill="#FFFFFF"/><rect x="30" y="260" width="160" height="200" rx="10" fill="#FFFFFF"/><rect x="210" y="260" width="160" height="200" rx="10" fill="#121518"/></g><text x="48" y="90" class="svgt" font-size="22" font-weight="900" fill="#FFFFFF">처음</text><text x="48" y="118" class="svgt" font-size="22" font-weight="900" fill="#FFFFFF">오셨나요?</text><use href="#s-person" x="252" y="96" width="76" height="114" style="color:#0E6A70"/><g fill="#C5CDD1"><rect x="48" y="300" width="120" height="10" rx="5"/><rect x="48" y="320" width="96" height="10" rx="5"/><rect x="48" y="340" width="108" height="10" rx="5"/></g><use href="#s-church" x="250" y="300" width="80" height="94" style="color:#F6B27E;--door:#121518"/><text x="350" y="446" text-anchor="end" font-family="Archivo,Arial" font-size="13" fill="#FFFFFF" fill-opacity=".7">1 / 4</text></svg></div>
+          <span class="cat">AI CONTENT</span>
+          <h3>새가족 환영 카드뉴스<span class="ex">예시</span></h3>
+          <p>SNS와 단체방에 나누는 4컷 안내</p>
+        </article>
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" aria-hidden="true"><rect width="400" height="500" fill="#121518"/><rect x="40" y="120" width="320" height="200" rx="12" fill="#1F2B31"/><circle cx="200" cy="220" r="40" fill="#E2702A"/><path d="M188 200l34 20-34 20z" fill="#FFFFFF"/><g fill="#5FC0C4"><rect x="60" y="370" width="6" height="30" rx="3"/><rect x="74" y="360" width="6" height="50" rx="3"/><rect x="88" y="376" width="6" height="18" rx="3"/><rect x="102" y="356" width="6" height="58" rx="3"/><rect x="116" y="368" width="6" height="34" rx="3"/><rect x="130" y="378" width="6" height="14" rx="3"/></g><rect x="160" y="380" width="200" height="4" rx="2" fill="#FFFFFF" opacity=".25"/><rect x="160" y="380" width="80" height="4" rx="2" fill="#E2702A"/><text x="40" y="84" class="svgt" font-size="20" font-weight="700" fill="#FFFFFF">3분 복음 이야기</text></svg></div>
+          <span class="cat">VIDEO</span>
+          <h3>복음 소개 영상<span class="ex">예시</span></h3>
+          <p>처음 듣는 사람을 위한 짧은 영상</p>
+        </article>
+        <article class="case">
+          <div class="img"><svg viewBox="0 0 400 500" aria-hidden="true"><rect width="400" height="500" fill="#1E2F5A"/><circle cx="200" cy="230" r="120" fill="none" stroke="#7E9BD1" stroke-width="4"/><ellipse cx="200" cy="230" rx="52" ry="120" fill="none" stroke="#7E9BD1" stroke-width="4"/><path d="M80 230h240M96 170h208M96 290h208" stroke="#7E9BD1" stroke-width="4"/><g class="svgt" font-weight="700"><rect x="30" y="80" width="130" height="40" rx="20" fill="#F6B27E"/><text x="95" y="106" text-anchor="middle" font-size="16" fill="#121518">안녕하세요</text><rect x="250" y="130" width="120" height="40" rx="20" fill="#FFFFFF"/><text x="310" y="156" text-anchor="middle" font-size="16" fill="#121518">Hello</text><rect x="40" y="330" width="130" height="40" rx="20" fill="#FFFFFF"/><text x="105" y="356" text-anchor="middle" font-size="16" fill="#121518">Xin chào</text><rect x="240" y="370" width="110" height="40" rx="20" fill="#F6B27E"/><text x="295" y="396" text-anchor="middle" font-size="16" fill="#121518">你好</text></g></svg></div>
+          <span class="cat">GLOBAL</span>
+          <h3>다국어 전도 카드<span class="ex">예시</span></h3>
+          <p>이주민·해외 선교지를 위한 번역 콘텐츠</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="eyebrow">Project Process</span>
+          <h2 class="title">전도명함 <b>도입 절차</b></h2>
+          <p class="lead">협력교회가 전도명함을 도입하는 다섯 단계입니다.</p>
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="n">01</span><span class="en">CONSULT</span><h3>도입 상담</h3><ul><li>교회 규모와 목표 확인</li><li>미자립교회 무상 지원 안내</li></ul></li>
+        <li class="step"><span class="n">02</span><span class="en">DESIGN</span><h3>교회 콘텐츠 구성</h3><ul><li>교회 소개·예배 영상·위치 정리</li><li>상황별 전도 문구 작성</li></ul></li>
+        <li class="step"><span class="n">03</span><span class="en">LAUNCH</span><h3>성도 명함 개설</h3><ul><li>개인명함과 전도명함 연계</li><li>상황별 명함 만들기</li></ul></li>
+        <li class="step"><span class="n">04</span><span class="en">TRAINING</span><h3>사용 교육</h3><ul><li>문자·메신저·QR 전달법</li><li>개인정보 동의 안내</li></ul></li>
+        <li class="step"><span class="n">05</span><span class="en">CARE</span><h3>성과 공유</h3><ul><li>조회·반응 확인과 후속 연결</li><li>사례 공유, 콘텐츠 정기 공급</li></ul></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="band">
+    <svg viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1600" height="600" fill="url(#g-dusk)"/>
+      <circle cx="1250" cy="600" r="300" fill="#F6B27E" opacity=".35"/><circle cx="1250" cy="600" r="160" fill="#FFD08A"/>
+      <g style="color:#14232B"><use href="#s-person" x="1040" y="430" width="70" height="105"/><use href="#s-person" x="1130" y="414" width="76" height="114"/><use href="#s-person" x="1300" y="420" width="74" height="111"/><use href="#s-person" x="1396" y="432" width="66" height="99"/></g>
+      <use href="#s-church" x="1210" y="380" width="90" height="105" style="color:#14232B;--door:#FFD08A"/>
+      <rect y="520" width="1600" height="80" fill="#14232B"/>
+    </svg>
+    <div class="wrap">
+      <span class="eyebrow" style="color:#F6B27E">Join Us · 2027 Goals</span>
+      <h2 style="margin-top:12px">창립회원과 협력교회를 찾습니다</h2>
+      <p>목회자, 선교사, 전도자, 평신도 누구나 선교회의 목적에 동의하면 함께할 수 있습니다. 정회원, 후원회원, 특별회원, 협력교회로 참여합니다.</p>
+      <div class="goals">
+        <div class="goal"><b>10<small>곳</small></b><span>협력교회</span></div>
+        <div class="goal"><b>100<small>명</small></b><span>전도명함 사용 성도</span></div>
+        <div class="goal"><b>300<small>건</small></b><span>AI 복음 콘텐츠</span></div>
+        <div class="goal"><b>4<small>회</small></b><span>선교교육 (참여 40명)</span></div>
+        <div class="goal"><b>30<small>명</small></b><span>회원·정기후원자 각각</span></div>
+      </div>
+      <p class="fine">창립 후 1년 목표치이며 현재 확보된 인원이 아닙니다.</p>
+      <div class="btns"><a class="btn or" href="#apply">창립회원 참여 신청</a><a class="btn line" href="#process">도입 절차 보기</a></div>
+    </div>
+  </div>
+
+  <!-- APPLY -->
+  <section id="apply">
+    <div class="wrap apply">
+      <div class="apply-intro">
+        <span class="eyebrow">Apply</span>
+        <h2 class="title">창립회원 <b>참여 신청</b></h2>
+        <p class="lead">남겨 주신 내용은 창립 준비위원회만 확인하며, 창립총회 일정과 준비 소식을 연락처로 안내해 드립니다.</p>
+        <ul>
+          <li>신청은 회원 확정이 아니며, 창립총회에서 회원 자격을 확정합니다.</li>
+          <li>사무소 주소, 연락처, 후원 계좌는 창립총회 후 안내합니다.</li>
+        </ul>
+        <svg class="apply-art" viewBox="0 0 360 170" aria-hidden="true">
+          <circle cx="180" cy="168" r="112" fill="var(--accent-soft)"/>
+          <circle cx="180" cy="168" r="70" fill="var(--accent)" opacity=".35"/>
+          <use href="#s-church" x="155" y="58" width="50" height="58" style="color:var(--teal);--door:var(--bg)"/>
+          <use href="#s-person" x="22" y="106" width="32" height="48" style="color:var(--teal)"/>
+          <use href="#s-person" x="64" y="100" width="34" height="54" style="color:var(--accent)"/>
+          <use href="#s-person" x="106" y="108" width="30" height="46" style="color:var(--ink)"/>
+          <use href="#s-person" x="224" y="108" width="30" height="46" style="color:var(--ink)"/>
+          <use href="#s-person" x="262" y="100" width="34" height="54" style="color:var(--teal)"/>
+          <use href="#s-person" x="306" y="106" width="32" height="48" style="color:var(--accent)"/>
+          <line x1="8" y1="155" x2="352" y2="155" stroke="var(--line)" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="panel">
+        <div class="ext" id="extApply">
+          <h3>온라인 신청서로 접수합니다</h3>
+          <p>버튼을 누르면 창립회원 참여 신청서가 열립니다. 이름, 소속 교회, 지역, 참여 구분, 연락처를 적어 주시면 준비위원회가 확인 후 연락드립니다.</p>
+          <ul>
+            <li><span>참여 구분</span>정회원 · 후원회원 · 특별회원 · 협력교회</li>
+            <li><span>소요 시간</span>약 2분</li>
+            <li><span>개인정보</span>창립 준비 안내 목적에만 사용하고, 준비가 끝나면 파기합니다.</li>
+          </ul>
+          <a class="btn or" id="applyLink" href="#apply" target="_blank" rel="noopener">참여 신청서 작성하기</a>
+          <p class="fine" id="applyNote" hidden style="color:var(--muted);font-size:13.5px">신청서 링크를 준비하고 있습니다. 곧 열어 드리겠습니다.</p>
+        </div>
+        <form id="applyForm" novalidate hidden>
+          <div class="row">
+            <label for="f-name"><span>이름<b class="req">*</b></span><input id="f-name" name="name" required maxlength="40" autocomplete="name" placeholder="홍길동"></label>
+            <label for="f-role"><span>직분 · 역할</span><input id="f-role" name="role" maxlength="40" placeholder="목사, 장로, 집사, 선교사 등"></label>
+          </div>
+          <div class="row">
+            <label for="f-church"><span>소속 교회 · 기관</span><input id="f-church" name="church" maxlength="60" placeholder="○○교회"></label>
+            <label for="f-region"><span>지역<b class="req">*</b></span>
+              <select id="f-region" name="region" required><option value="">선택해 주세요</option><option>부산</option><option>울산</option><option>경남</option><option>그 외 지역</option></select>
+            </label>
+          </div>
+          <fieldset>
+            <legend>참여 구분<b class="req">*</b></legend>
+            <div class="chips">
+              <label><input type="radio" name="type" value="정회원" id="f-t1" required><span>정회원</span></label>
+              <label><input type="radio" name="type" value="후원회원" id="f-t2"><span>후원회원</span></label>
+              <label><input type="radio" name="type" value="특별회원" id="f-t3"><span>특별회원</span></label>
+              <label><input type="radio" name="type" value="협력교회" id="f-t4"><span>협력교회</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>관심 분야</legend>
+            <div class="chips">
+              <label><input type="checkbox" name="interest" value="전도명함" id="f-i1"><span>전도명함</span></label>
+              <label><input type="checkbox" name="interest" value="AI 콘텐츠" id="f-i2"><span>AI 콘텐츠</span></label>
+              <label><input type="checkbox" name="interest" value="영상" id="f-i3"><span>영상</span></label>
+              <label><input type="checkbox" name="interest" value="교육" id="f-i4"><span>교육</span></label>
+              <label><input type="checkbox" name="interest" value="해외선교" id="f-i5"><span>해외선교</span></label>
+            </div>
+          </fieldset>
+          <label for="f-contact"><span>연락처 (휴대폰 또는 이메일)<b class="req">*</b></span><input id="f-contact" name="contact" required maxlength="80" placeholder="010-0000-0000"></label>
+          <label for="f-msg"><span>하고 싶은 말</span><textarea id="f-msg" name="message" rows="3" maxlength="500" placeholder="함께하고 싶은 이유나 섬기고 싶은 분야를 적어 주세요"></textarea></label>
+          <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" required><span>창립 준비 안내를 위해 이름, 소속, 연락처를 수집·이용하는 데 동의합니다. 창립 준비가 끝나거나 요청하시면 지체 없이 파기합니다.</span></label>
+          <div class="submit"><button class="btn or" type="submit" id="f-submit">참여 신청하기</button><p id="f-status" role="status" aria-live="polite"></p></div>
+        </form>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="admin" id="admin" hidden>
+        <span class="eyebrow">준비위원회 전용</span>
+        <h3>참여 신청 현황 <span id="a-count">0</span>건</h3>
+        <div class="admin-sum" id="a-sum"></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>신청일</th><th>이름</th><th>직분</th><th>소속</th><th>지역</th><th>구분</th><th>관심 분야</th><th>연락처</th><th>하고 싶은 말</th></tr></thead>
+            <tbody id="a-rows"><tr><td colspan="9" class="empty">아직 신청이 없습니다. 첫 신청이 들어오면 이곳에 바로 표시됩니다.</td></tr></tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-top:12px">이 표는 소유자에게만 보입니다. 신청자는 자신의 신청서만 볼 수 있습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICE -->
+  <section class="notice" id="notice">
+    <div class="wrap">
+      <div class="head-row"><div><span class="eyebrow">Notice</span><h2 class="title">선교회 소식</h2></div></div>
+      <div class="nlist">
+        <details><summary><span class="k">NOTICE</span><span class="t">디지털복음선교회 홈페이지를 열었습니다</span><time datetime="2026-10-27">2026.10.27</time><span class="plus" aria-hidden="true">+</span></summary><p class="nb">창립 준비 과정과 사역 소식을 이곳에서 알려 드립니다.</p></details>
+        <details><summary><span class="k">RECRUIT</span><span class="t">창립회원 및 협력교회 참여 신청을 받습니다</span><time datetime="2026-10-27">2026.10.27</time><span class="plus" aria-hidden="true">+</span></summary><p class="nb">정회원, 후원회원, 특별회원, 협력교회로 참여하실 수 있습니다. 위의 참여 신청에서 접수해 주세요.</p></details>
+        <details><summary><span class="k">CASE</span><span class="t">울산 병영교회 디지털 전도명함 도입 사례</span><time datetime="2026-08-23">2026.08.23</time><span class="plus" aria-hidden="true">+</span></summary><p class="nb">장로 1인 도입 후 주일 2부예배 유튜브 조회수가 도입 전 200~250회에서 도입 당일 536회로 올랐고, 이후 315~480회를 유지했습니다.</p></details>
+        <details><summary><span class="k">SCHEDULE</span><span class="t">창립총회 일정 안내</span><time>확정 후 공지</time><span class="plus" aria-hidden="true">+</span></summary><p class="nb">창립총회 일정과 장소는 확정되는 대로 이곳과 신청자 연락처로 안내합니다.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="6" width="24" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 10v10M11 14h8" stroke="#E2702A" stroke-width="2.4" stroke-linecap="round"/></svg><span>디지털복음선교회<small>DIGITAL GOSPEL MISSION</small></span></a>
+      </div>
+      <dl class="finfo">
+        <div><dt>Region</dt><dd>부산 · 울산 · 경남 (이후 전국·해외 확대)</dd></div>
+        <div><dt>Office</dt><dd>사무소 주소와 연락처는 창립총회 후 안내합니다</dd></div>
+        <div><dt>Privacy</dt><dd>전도명함으로 얻는 정보는 본인 동의 등 적법한 근거와 필요한 범위 안에서만 다룹니다</dd></div>
+        <div><dt>AI Content</dt><dd>AI로 만든 콘텐츠는 성경적 정확성과 사실관계를 확인하고, 저작권과 초상권을 존중합니다</dd></div>
+      </dl>
+    </div>
+    <div class="fcopy"><span>© 2026 디지털복음선교회 · 창립 준비 중</span><span>초교파 디지털 선교 네트워크</span></div>
+  </div>
+</footer>
+
+<script>
+// ▼ 외부 홈페이지에서 쓸 구글 폼 주소를 따옴표 안에 붙여 넣으세요. 예: "https://forms.gle/abcd1234"
+var APPLY_URL = "";
+
+/* header & drawer */
+(function(){
+  var h=document.getElementById('hdr'), hero=document.querySelector('.hero');
+  function onScroll(){h.classList.toggle('solid',window.scrollY>hero.offsetHeight-90)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var d=document.getElementById('drawer'),b=document.getElementById('burger'),c=document.getElementById('dclose');
+  function open(v){d.hidden=!v;b.setAttribute('aria-expanded',v);document.body.style.overflow=v?'hidden':''; if(v)c.focus()}
+  b.addEventListener('click',function(){open(true)});c.addEventListener('click',function(){open(false)});
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){open(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!d.hidden)open(false)});
+})();
+
+/* hero slider */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')), i=0, timer=null, prog=document.getElementById('prog'), cur=document.getElementById('cur');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches, playing=!reduce;
+  var playBtn=document.getElementById('play'), icon=document.getElementById('playIcon');
+  function show(n){
+    slides[i].classList.remove('on'); i=(n+slides.length)%slides.length; slides[i].classList.add('on');
+    cur.textContent=('0'+(i+1)).slice(-2); restart();
+  }
+  function restart(){
+    clearTimeout(timer); prog.classList.remove('run'); void prog.offsetWidth;
+    if(playing){prog.classList.add('run'); timer=setTimeout(function(){show(i+1)},6000)}
+  }
+  function setPlay(v){playing=v; icon.innerHTML=v?'<path d="M6 3v10M10 3v10"/>':'<path d="M5 3l8 5-8 5z"/>'; playBtn.setAttribute('aria-label',v?'자동 넘김 멈춤':'자동 넘김 시작'); restart()}
+  document.getElementById('prev').addEventListener('click',function(){show(i-1)});
+  document.getElementById('next').addEventListener('click',function(){show(i+1)});
+  playBtn.addEventListener('click',function(){setPlay(!playing)});
+  setPlay(playing);
+})();
+
+/* phone tabs */
+(function(){
+  var msgs={work:"함께 일하게 되어 반갑습니다. 제가 다니는 교회의 주일예배를 소개해 드려요. 바쁜 한 주, 잠깐의 쉼이 되면 좋겠습니다.",near:"같은 동네에서 만나 반가워요. 가까운 곳에 있는 우리 교회를 소개합니다. 언제든 편하게 들러 주세요.",new:"이번 주일, 새가족 초청 예배에 모시고 싶습니다. 예배 시간과 오시는 길을 아래에서 확인해 보세요."};
+  var tabs=document.querySelectorAll('.ptabs button'), m=document.getElementById('pmsg');
+  tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(t){t.setAttribute('aria-selected',t===b?'true':'false')});m.style.opacity=0;setTimeout(function(){m.textContent=msgs[b.dataset.k];m.style.opacity=1},150)})});
+})();
+
+/* cases carousel */
+(function(){
+  var t=document.getElementById('track');
+  function step(){var c=t.querySelector('.case');return c?c.getBoundingClientRect().width+20:300}
+  document.getElementById('cprev').addEventListener('click',function(){t.scrollBy({left:-step(),behavior:'smooth'})});
+  document.getElementById('cnext').addEventListener('click',function(){t.scrollBy({left:step(),behavior:'smooth'})});
+})();
+
+/* apply: form inside Claude, external link elsewhere */
+(function(){
+  var ext=document.getElementById('extApply'), link=document.getElementById('applyLink'), note=document.getElementById('applyNote');
+  if(APPLY_URL){link.href=APPLY_URL}else{link.removeAttribute('target');link.addEventListener('click',function(e){e.preventDefault();note.hidden=false})}
+
+  var form=document.getElementById('applyForm'), status=document.getElementById('f-status'), btn=document.getElementById('f-submit');
+  var db=null, uid=null;
+  function say(t,c){status.textContent=t;status.className=c||''}
+  function fill(d){
+    ['name','role','church','region','contact','message'].forEach(function(k){if(form.elements[k]&&d[k]!=null)form.elements[k].value=d[k]});
+    form.querySelectorAll('input[name="type"]').forEach(function(r){r.checked=(r.value===d.type)});
+    var ints=d.interests||[]; form.querySelectorAll('input[name="interest"]').forEach(function(c){c.checked=ints.indexOf(c.value)>-1});
+    document.getElementById('f-consent').checked=true; btn.textContent='신청 내용 수정하기';
+    say('이미 신청하셨습니다. 내용을 고친 뒤 다시 저장할 수 있습니다.','ok');
+  }
+  function fmt(ts){if(!ts)return '';var d=new Date(ts);return (d.getMonth()+1)+'.'+d.getDate()+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+  function td(x,c){var e=document.createElement('td');e.textContent=x||'—';if(c)e.className=c;return e}
+  function renderAdmin(snap){
+    var rows=document.getElementById('a-rows'),sum=document.getElementById('a-sum');
+    var list=snap.docs.map(function(s){return s.data()||{}}).sort(function(a,b){return (b.createdAt||0)-(a.createdAt||0)});
+    document.getElementById('a-count').textContent=list.length; rows.textContent='';
+    if(!list.length){var tr=document.createElement('tr'),c=td('아직 신청이 없습니다. 첫 신청이 들어오면 이곳에 바로 표시됩니다.','empty');c.colSpan=9;tr.appendChild(c);rows.appendChild(tr)}
+    var by={};
+    list.forEach(function(d){by[d.type]=(by[d.type]||0)+1;var tr=document.createElement('tr');[td(fmt(d.createdAt),'num'),td(d.name),td(d.role),td(d.church),td(d.region),td(d.type),td((d.interests||[]).join(', ')),td(d.contact,'num'),td(d.message)].forEach(function(c){tr.appendChild(c)});rows.appendChild(tr)});
+    sum.textContent='';Object.keys(by).forEach(function(k){var s=document.createElement('span');s.textContent=k+' '+by[k];sum.appendChild(s)});
+  }
+  async function init(){
+    if(!window.claude||!window.claude.use) return;          // 외부 홈페이지: 구글 폼 링크 유지
+    var user=null;
+    try{db=await window.claude.use('db');user=await window.claude.use('user')}catch(e){}
+    if(!db||!user) return;
+    try{uid=await user.id()}catch(e){}
+    if(!uid) return;
+    ext.hidden=true; form.hidden=false;
+    var owner=false;try{owner=await user.isOwner()}catch(e){}
+    if(owner){document.getElementById('admin').hidden=false;db.collection('applications').onSnapshot(renderAdmin,function(){})}
+    try{var s=await db.doc('applications/'+uid).get();if(s.exists)fill(s.data())}catch(e){}
+  }
+  init();
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var bad=null;
+    ['f-name','f-region','f-contact'].forEach(function(id){var el=document.getElementById(id),em=!el.value.trim();el.setAttribute('aria-invalid',em?'true':'false');if(em&&!bad)bad=el});
+    var type=form.querySelector('input[name="type"]:checked');
+    if(bad){bad.focus();say('이름, 지역, 연락처를 입력해 주세요.','err');return}
+    if(!type){say('참여 구분을 골라 주세요.','err');return}
+    if(!document.getElementById('f-consent').checked){say('개인정보 수집·이용에 동의해 주셔야 신청할 수 있습니다.','err');return}
+    var data={name:form.elements.name.value.trim(),role:form.elements.role.value.trim(),church:form.elements.church.value.trim(),region:form.elements.region.value,type:type.value,
+      interests:[].map.call(form.querySelectorAll('input[name="interest"]:checked'),function(c){return c.value}),contact:form.elements.contact.value.trim(),message:form.elements.message.value.trim(),consent:true,createdAt:Date.now()};
+    btn.disabled=true;say('저장하고 있습니다…');
+    try{
+      var ref=db.doc('applications/'+uid),prev=await ref.get();
+      if(prev.exists&&prev.data()&&prev.data().createdAt){data.createdAt=prev.data().createdAt;data.updatedAt=Date.now()}
+      await ref.set(data);btn.textContent='신청 내용 수정하기';
+      say(data.name+'님, 참여 신청이 접수되었습니다. 창립 준비 소식을 연락처로 안내해 드리겠습니다.','ok');
+    }catch(err){
+      var code=err&&err.code;
+      if(code==='permission_denied'||code==='not_granted')say('보기 전용 권한으로는 신청서를 저장할 수 없습니다. 페이지를 공유한 분께 참여 권한을 요청해 주세요.','err');
+      else say('저장하지 못했습니다. 잠시 후 다시 시도해 주세요.','err');
+    }finally{btn.disabled=false}
+  });
+})();
+</script>
+
+</body>
+</html>
